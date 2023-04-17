@@ -1,0 +1,214 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* styling the body */
+body{
+    background:url(./light.jpg), rgba(0,0,0,0.9);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* styling the date div */
+#date{
+    width: 500px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    font-style: italic;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    background-color: #1e3e49;
+    color: whitesmoke;
+    letter-spacing: 3px;
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+/* styling the clock div */
+#digitalClock{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 10px;
+}
+
+#digitalClock div{
+    position: relative;
+    background-color: white;
+    width: 110px;
+    height: 100px;
+    text-align: center;
+    line-height: 95px;
+    font-size: 45px;
+    box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.2);
+    border: 1px solid white;
+    border-radius: 15px;
+    color: black;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#digitalClock .colon{
+    width: 25px;
+    background-color: transparent;
+    box-shadow: none;
+    border: none ;
+}
+
+#digitalClock div::before{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    font-size: 15px;
+    color: black;
+    letter-spacing: 1px;
+}
+
+#digitalClock .hours::before{
+    content: "Hours";
+}
+
+#digitalClock .minutes::before{
+    content: "Minutes";
+}
+
+#digitalClock .seconds::before{
+    content: "Seconds";
+}
+
+/* styling the icons */
+#switchMode {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#switchMode:hover{
+    background-color: #ec9860;
+    border: 1px transparent;
+    border-radius: 50%;
+}
+
+#speech {
+    position: absolute;
+    right: 60px;
+    top: 20px;
+    padding: 8px;
+    font-size: 23px;
+    cursor: pointer;
+}
+#speech:hover{
+    background-color: #ec9860;
+    border: 1px transparent;
+    border-radius: 50%;
+}
+
+/* styling the alarm details */
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    margin-top: 95px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 5px;
+}
+
+.container input{
+    width: 250px;
+    padding: 5px;
+    background-color: #def2f1;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin-bottom: 2px;
+}
+
+.container button{
+    width: 120px;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: white;
+    background-color: #1e3e49;
+    cursor: pointer;
+}
+.container button:hover{
+    background-color: #def2f1;
+    transition: 0.3s ease-in-out;
+    color: black;
+}
+
+/* Media Query */
+@media ( max-width: 564px){
+    #date{
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        width: auto;
+        gap: 3px;
+    }
+
+    #digitalClock div{
+        width: 55px;
+        height: 50px;
+        line-height: 45px;
+        font-size: 22px;
+        border-radius: 10px;
+    }
+    
+    #digitalClock .colon{
+        width: 5px;
+    }
+
+    #digitalClock div::before{
+        height: 15px;
+        line-height: 15px;
+        font-size: 7px;
+    }
+
+    #switchMode{
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    #speech {
+        padding: 4px;
+        font-size: 18px;
+    }
+    
+    .container{
+        margin-top: 60px;
+    }
+    .container input{
+        padding: 2px 10px;
+        width: 150px;
+    }
+    .container button{
+        padding: 2px;
+        width: auto;
+        font-size: 12px;
+    }
+}
+
